@@ -15,8 +15,8 @@ export class CardComponent implements OnInit {
     return this.quranService.getQuran().subscribe((data) => {
       console.log(typeof data);
       console.log(data.index);
-      //this.Souwar.= data;
-      //console.log(this.Souwar);
+      this.Souwar = data;
+      console.log(this.Souwar);
     });
   }
 }
