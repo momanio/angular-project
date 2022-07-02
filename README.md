@@ -1,2 +1,0 @@
-# angular-project
-Not Provided
