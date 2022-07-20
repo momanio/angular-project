@@ -1,0 +1,97 @@
+/* .car-image {
+  width: 200px;
+  height: 200px;
+} */
+.main-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 4rem;
+
+}
+
+.text {
+  height: calc(100vh - 4rem);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.header-description {
+  font-weight: bold;
+  font-size: 3.313rem;
+
+}
+
+.body-description {
+  font-size: 1.25rem;
+}
+
+.button-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn1 {
+  width: 13.313rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  background-color: #B53300;
+  border: 1px solid #B53300;
+  color: white;
+  margin-right: 1rem;
+}
+
+.btn2 {
+  width: 13.313rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  border: 1px solid #B53300;
+  color: black;
+  font-weight: bold;
+}
+
+.app-download {
+  font-size: 1.5rem;
+  font-weight: bold;
+
+}
+
+.btn3 {
+  width: 8.438rem;
+  height: 2.5rem;
+  border-radius: 0.3rem;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.btn4 {
+  width: 8.438rem;
+  height: 2.5rem;
+  border-radius: 0.3rem;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  font-weight: bold;
+}
+
+.btn3:hover {
+  background-color: black;
+  color: white;
+}
+
+.btn4:hover {
+  background-color: black;
+  color: white;
+}
+
+.car-image {
+  width: 53.375rem;
+  height: 26rem;
+}

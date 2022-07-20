@@ -1,0 +1,42 @@
+.main-holder {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 4rem;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Dancing Script", cursive;
+}
+
+.path-list {
+  font-size: 1.2rem;
+  color: white;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-evenly;
+  flex: 0.5;
+}
+
+#link {
+  color: white;
+  text-decoration: none;
+}
+
+.buy-button {
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  background-color: #b53300;
+  color: white;
+  font-family: "Dancing Script", cursive;
+  border-radius: 8px;
+  transition: 1s;
+}
+
+.buy-button:hover {
+  border: 1px solid white;
+}
