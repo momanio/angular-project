@@ -5,8 +5,6 @@ import { Car } from './car.model';
 
 @Injectable({ providedIn: 'root' })
 export class CarSlotService {
-  private carData: Car[] = [];
-
   constructor(private http: HttpClient) {}
 
   getData() {
@@ -17,9 +15,9 @@ export class CarSlotService {
       .pipe(
         map((response) => {
           const resArr: Car[] = [];
-          for (const cars in response) {
-            if (response.hasOwnProperty(cars)) {
-              resArr.push({ ...response[cars] });
+          for (const key in response) {
+            if (response.hasOwnProperty(key)) {
+              resArr.push({ ...response[key] });
             }
           }
 
