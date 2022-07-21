@@ -1,4 +1,4 @@
-<div class="main-holder">
+<!-- <div class="main-holder">
   <div class="sub-holder">
     <div class="header">
       <div class="logoAndText">
@@ -116,16 +116,25 @@
     </div>
   </div>
 </div>
-<div class="endOfPage"></div>
+<div class="endOfPage"></div> -->
 
-<!-- <div>
-  <ul *ngFor="let item of Cars">
-    <li>{{ item.price }}</li>
+<div class="row">
+  <ul class="list-group" *ngFor="let item of Cars; let i = index">
+    <li class="list-group-item">
+      {{ item.manufacturerName }}
+    </li>
   </ul>
-</div> -->
+</div>
 <div>
-  <ul *ngFor="let item of heroes">
-    <li>{{ item.id }}</li>
+  <ul *ngFor="let item of Cars; let i = index">
+    <li>{{ item[i].details }}</li>
+    <li>{{ item[i].carType }}</li>
+    <li>{{ item[i].manufacturerName }}</li>
+    <li>{{ item[i].milAge }}</li>
+    <li>{{ item[i].price }}</li>
+    <li>{{ item[i].year }}</li>
+
+    <img [src]="item[i].carImage" class="rounded mx-auto d-block" alt="..." />
   </ul>
 </div>
 

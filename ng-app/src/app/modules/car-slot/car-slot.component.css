@@ -16,7 +16,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .logoAndText {
@@ -45,13 +44,6 @@
   font-weight: 700;
 }
 
-.body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-
 .car-price {
   margin-top: 2rem;
   height: calc(100vh - 28.37rem);
@@ -61,7 +53,6 @@
 }
 
 .car-image {
-
   height: calc(100vh - 28.37rem);
   width: 100%;
   display: flex;
@@ -71,14 +62,12 @@
 }
 
 .car-show-control {
-
   height: calc(100vh - 28.37rem);
   width: calc(100% / 6);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-
 }
 
 .numberOf-item {

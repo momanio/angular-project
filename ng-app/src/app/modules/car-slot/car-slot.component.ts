@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { CarSlotService } from './car-slot.service';
 import { Car } from './car.model';
 @Component({
@@ -6,25 +7,23 @@ import { Car } from './car.model';
   templateUrl: './car-slot.component.html',
   styleUrls: ['./car-slot.component.css'],
 })
-export class CarSlotComponent implements OnInit {
-  Cars: Car[] = [];
-  heroes = [
-    { id: 12, name: 'Dr. Nice' },
-    { id: 13, name: 'Bombasto' },
-    { id: 14, name: 'Celeritas' },
-    { id: 15, name: 'Magneta' },
-    { id: 16, name: 'RubberMan' },
-    { id: 17, name: 'Dynama' },
-    { id: 18, name: 'Dr. IQ' },
-    { id: 19, name: 'Magma' },
-    { id: 20, name: 'Tornado' },
-  ];
+export class CarSlotComponent implements OnInit, OnDestroy {
+  @Input() Cars = [];
+  unSub: Subscription;
+
   constructor(private cService: CarSlotService) {}
   ngOnInit(): void {
-    this.cService.getData().subscribe((res: []) => {
-      return (this.Cars = { ...res });
+    this.unSub = this.cService.getData().subscribe((res) => {
+      this.Cars = res.slice();
+      console.log('From init0', res);
+      console.log('From init0Cars', this.Cars[0]);
     });
-    this.Cars = this.cService.getCars();
-    console.log('From init', this.Cars);
+
+    console.log('From init1', this.Cars);
+  }
+
+  ngOnDestroy(): void {
+    console.log('From init2', this.Cars);
+    this.unSub.unsubscribe();
   }
 }

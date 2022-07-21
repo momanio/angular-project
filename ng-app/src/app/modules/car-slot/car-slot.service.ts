@@ -1,11 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { Car } from './car.model';
 
 @Injectable({ providedIn: 'root' })
 export class CarSlotService {
-  carData: Car[] = [];
+  private carData: Car[] = [];
 
   constructor(private http: HttpClient) {}
 
@@ -16,14 +16,15 @@ export class CarSlotService {
       )
       .pipe(
         map((response) => {
-          this.carData = { ...response };
-          console.log(this.carData);
-          return this.carData;
+          const resArr: Car[] = [];
+          for (const cars in response) {
+            if (response.hasOwnProperty(cars)) {
+              resArr.push({ ...response[cars] });
+            }
+          }
+
+          return resArr;
         })
       );
-  }
-
-  getCars() {
-    return this.carData.slice();
   }
 }
