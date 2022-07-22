@@ -7,7 +7,6 @@
   justify-content: center;
   align-items: center;
   padding-left: 4rem;
-
 }
 
 .text {
@@ -21,7 +20,6 @@
 .header-description {
   font-weight: bold;
   font-size: 3.313rem;
-
 }
 
 .body-description {
@@ -38,8 +36,8 @@
   width: 13.313rem;
   height: 3rem;
   border-radius: 0.5rem;
-  background-color: #B53300;
-  border: 1px solid #B53300;
+  background-color: #b53300;
+  border: 1px solid #b53300;
   color: white;
   margin-right: 1rem;
 }
@@ -49,7 +47,7 @@
   height: 3rem;
   border-radius: 0.5rem;
   background-color: white;
-  border: 1px solid #B53300;
+  border: 1px solid #b53300;
   color: black;
   font-weight: bold;
 }
@@ -57,7 +55,6 @@
 .app-download {
   font-size: 1.5rem;
   font-weight: bold;
-
 }
 
 .btn3 {

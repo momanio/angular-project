@@ -23,7 +23,7 @@ export class CarSlotComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    console.log('From init2', this.Cars);
+    console.log('From init Destroy', this.Cars);
     this.unSub.unsubscribe();
   }
 }
