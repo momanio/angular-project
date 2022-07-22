@@ -36,6 +36,9 @@
         <button type="submit" class="btn btn-dark" [disabled]="!authForm.valid">
           {{ isLoginMode ? "Login" : "Sign Up" }}
         </button>
+        <div class="alert alert-dark" *ngIf="error">
+          <p>{{ error }}</p>
+        </div>
         <p class="message">
           {{ isLoginMode ? "Not registered?" : "" }}
           <a (click)="onSwitchMode()" type="button">{{
