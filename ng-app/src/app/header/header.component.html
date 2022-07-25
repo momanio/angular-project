@@ -20,7 +20,20 @@
         <li *ngIf="isAuthenticated" routerLinkActive="active" class="nav-item">
           <a class="nav-link" routerLink="/carslot">Cars</a>
         </li>
+        <li *ngIf="isAuthenticated" routerLinkActive="active" class="nav-item">
+          <a class="nav-link" routerLink="/contact-us">Contact us</a>
+        </li>
       </ul>
+
+      <form *ngIf="isAuthenticated" class="d-flex">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-light" type="submit">Search</button>
+      </form>
 
       <div class="nav navbar-nav navbar-right" id="navbarToggler">
         <ul class="navbar-nav ml-auto">
@@ -76,14 +89,15 @@
               <p class="d-lg-none">GitHub</p>
             </a>
           </li>
-          <li *ngIf="isAuthenticated" class="nav-item">
-            <a class="nav-link" style="cursor: pointer" (click)="onLogout()"
-              ><i class="nc-icon nc-book-bookmark"></i> Logout</a
-            >
-          </li>
 
-          <li routerLinkActive="active" class="nav-item">
-            <a class="nav-link" routerLink="/contact-us">Contact us</a>
+          <li *ngIf="isAuthenticated" class="nav-item">
+            <a
+              class="nav-link"
+              title="Logout"
+              style="cursor: pointer"
+              (click)="onLogout()"
+              ><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a
+            >
           </li>
         </ul>
       </div>

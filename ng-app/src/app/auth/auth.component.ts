@@ -41,7 +41,7 @@ export class AuthComponent {
 
     authObs.subscribe({
       next: (resData) => {
-        console.log(resData);
+        console.log(resData.email);
         this.isLoading = false;
         this.router.navigate(['/home']);
       },

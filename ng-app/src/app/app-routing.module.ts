@@ -22,6 +22,7 @@ const routes: Routes = [
       import('./modules/contact-us/contact-us.module').then(
         (m) => m.ContactUsModule
       ),
+    canActivate: [AuthGuard],
   },
   {
     path: 'auth',

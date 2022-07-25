@@ -43,8 +43,8 @@
   padding: 15px;
   color: #ffffff;
   font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
+  -webkit-transition: all 0.2 ease;
+  transition: all 0.2 ease;
   cursor: pointer;
 }
 .form button:hover,
@@ -99,4 +99,5 @@ body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
 }
