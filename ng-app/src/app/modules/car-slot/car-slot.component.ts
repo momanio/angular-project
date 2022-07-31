@@ -10,13 +10,15 @@ import { Car } from './car.model';
 export class CarSlotComponent implements OnInit, OnDestroy {
   @Input() cars: Car[] = [];
   unSub: Subscription;
+  index: number = 0;
 
   constructor(private cService: CarSlotService) {}
   ngOnInit(): void {
     this.unSub = this.cService.getData().subscribe({
       next: ({ response }) => {
         console.log('resp: ', response);
-        //this.cars = response;
+
+        this.cars = response;
         console.log('cars: ', this.cars);
       },
       error: (errorRes) => {
@@ -29,6 +31,21 @@ export class CarSlotComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     console.log('From init Destroy', this.cars);
     this.unSub.unsubscribe();
+  }
+
+  nextItem() {
+    if (this.index == this.cars.length - 1) {
+      this.index = 0;
+    } else {
+      this.index++;
+    }
+  }
+  prevItem() {
+    if (this.index == 0) {
+      this.index = this.cars.length - 1;
+    } else {
+      this.index--;
+    }
   }
 }
 function throwError(_arg0: () => Error): void {

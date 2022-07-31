@@ -1,25 +1,132 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="card" *ngFor="let item of cars">
+<div class="main-holder">
+  <div class="sub-holder">
+    <div class="header">
+      <div class="logoAndText">
+        <svg
+          width="27"
+          height="20"
+          viewBox="0 0 27 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M26.0011 5.85753H22.9559L22.1096 3.74164C21.2398 1.56623 19.1641 0.160889 16.8208 0.160889H10.3612C8.01849 0.160889 5.94227 1.56623 5.072 3.74164L4.22564 5.85753H1.18099C0.783752 5.85753 0.492307 6.23087 0.588947 6.6159L0.894124 7.83661C0.961772 8.10822 1.20591 8.29895 1.48617 8.29895H2.50699C1.8239 8.89558 1.38393 9.76279 1.38393 10.7404V13.1818C1.38393 14.0017 1.69725 14.7418 2.19774 15.3145V18.0646C2.19774 18.9634 2.92661 19.6922 3.82535 19.6922H5.45297C6.35171 19.6922 7.08058 18.9634 7.08058 18.0646V16.437H20.1015V18.0646C20.1015 18.9634 20.8303 19.6922 21.7291 19.6922H23.3567C24.2555 19.6922 24.9843 18.9634 24.9843 18.0646V15.3145C25.4848 14.7423 25.7981 14.0022 25.7981 13.1818V10.7404C25.7981 9.76279 25.3582 8.89558 24.6756 8.29895H25.6964C25.9767 8.29895 26.2208 8.10822 26.2884 7.83661L26.5936 6.6159C26.6898 6.23087 26.3983 5.85753 26.0011 5.85753ZM8.09428 4.95065C8.46507 4.02393 9.3628 3.41612 10.3612 3.41612H16.8208C17.8193 3.41612 18.717 4.02393 19.0878 4.95065L20.1015 7.48515H7.08058L8.09428 4.95065ZM5.45297 13.1716C4.4764 13.1716 3.82535 12.5226 3.82535 11.5491C3.82535 10.5756 4.4764 9.92657 5.45297 9.92657C6.42953 9.92657 7.89439 11.3868 7.89439 12.3604C7.89439 13.3339 6.42953 13.1716 5.45297 13.1716ZM21.7291 13.1716C20.7525 13.1716 19.2877 13.3339 19.2877 12.3604C19.2877 11.3868 20.7525 9.92657 21.7291 9.92657C22.7057 9.92657 23.3567 10.5756 23.3567 11.5491C23.3567 12.5226 22.7057 13.1716 21.7291 13.1716Z"
+            fill="#343A40"
+          />
+        </svg>
+        <div class="title">CarSlot</div>
+      </div>
+      <div class="langAndSearchFab">
+        <div class="language">ENG</div>
         <div>
-          <ul>
-            <li>{{ item.id }}</li>
-            <li>{{ item.carType }}</li>
-            <li>{{ item.manufacturerName }}</li>
-            <li>{{ item.milAge }}</li>
-            <li>{{ item.price }}</li>
-            <li>{{ item.year }}</li>
-            <li>{{ item.carImage }}</li>
-            <img
-              [src]="item.carImage"
-              class="img-responsive mx-auto d-block"
-              width="100%"
-              [alt]="item.carType"
+          <svg
+            width="26"
+            height="27"
+            viewBox="0 0 26 27"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11.6082 21.7623C17.0872 21.7623 21.5289 17.3206 21.5289 11.8416C21.5289 6.36254 17.0872 1.9209 11.6082 1.9209C6.12914 1.9209 1.6875 6.36254 1.6875 11.8416C1.6875 17.3206 6.12914 21.7623 11.6082 21.7623Z"
+              stroke="#343A40"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
             />
-          </ul>
+            <path
+              d="M24.4432 25.9166L19.0488 20.5222"
+              stroke="#343A40"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
         </div>
       </div>
     </div>
+    <div class="body" *ngFor="let car of cars">
+      <div class="car-price">{{ car.price }}</div>
+      <div class="car-image">
+        <img class="animate__animated animate__bounceIn" [src]="car.carImage" />
+      </div>
+      <div class="car-show-control">
+        <div (click)="nextItem()">
+          <svg
+            width="24"
+            height="25"
+            viewBox="0 0 24 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 19.252V5.25195"
+              stroke="#343A40"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M5 12.252L12 5.25195L19 12.252"
+              stroke="#343A40"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div class="numberOf-item">{{ index + 1 }}</div>
+        <div (click)="prevItem()">
+          <svg
+            width="30"
+            height="31"
+            viewBox="0 0 30 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="15" cy="15.252" r="15" fill="#343A40" />
+            <g clip-path="url(#clip0_28_624)">
+              <path
+                d="M15 8.25195V18.752"
+                stroke="#F8F9FA"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M18.5 15.252L15 18.752L11.5 15.252"
+                stroke="#F8F9FA"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_28_624">
+                <rect
+                  width="12"
+                  height="12"
+                  fill="white"
+                  transform="translate(9 9.25195)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="endOfPage" *ngFor="let item of cars">
+  <div class="item">
+    {{ item.year }} <br />
+    <span class="sub-item">Year</span>
+  </div>
+  <div class="item">
+    {{ item.milAge }}<br />
+    <span class="sub-item">Mailage </span>
+  </div>
+  <div class="item">
+    {{ item.manufacturerName }} <br />
+    <span class="sub-item">{{ item.carType }} </span>
   </div>
 </div>
