@@ -1,6 +1,12 @@
-# CarShop
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
+
+Angular 14.0.0 Project using firebaseAPI for authentication.
+
+## Change API key
+
+Get API from Firebase Authentication Visit `https://firebase.google.com/` for more information about how to get API.
+
+Go to environments folder and change the value of firebaseAPI on both files environments.prod.ts and environments.ts .
 
 ## Development server
 
