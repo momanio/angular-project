@@ -7,20 +7,14 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () =>
-      import('./modules/home/home.module').then((m) => m.HomeModule),
+      import('./components/home/home.module').then((m) => m.HomeModule),
     canActivate: [AuthGuard],
   },
   {
-    path: 'carslot',
+    path: 'contact',
     loadChildren: () =>
-      import('./modules/car-slot/car-slot.module').then((m) => m.CarSlotModule),
-    canActivate: [AuthGuard],
-  },
-  {
-    path: 'contact-us',
-    loadChildren: () =>
-      import('./modules/contact-us/contact-us.module').then(
-        (m) => m.ContactUsModule
+      import('./components/contact/contact.module').then(
+        (m) => m.ContactModule
       ),
     canActivate: [AuthGuard],
   },

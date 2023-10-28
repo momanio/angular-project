@@ -1,6 +1,6 @@
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
+# NgAuth
 
-Angular 14.0.0 Project using firebaseAPI for authentication.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
 
 ## Change API key
 

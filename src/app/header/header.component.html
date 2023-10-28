@@ -17,23 +17,11 @@
         <li *ngIf="isAuthenticated" routerLinkActive="active" class="nav-item">
           <a class="nav-link" routerLink="/home">Home</a>
         </li>
+
         <li *ngIf="isAuthenticated" routerLinkActive="active" class="nav-item">
-          <a class="nav-link" routerLink="/carslot">Cars</a>
-        </li>
-        <li *ngIf="isAuthenticated" routerLinkActive="active" class="nav-item">
-          <a class="nav-link" routerLink="/contact-us">Contact us</a>
+          <a class="nav-link" routerLink="/contact">Contact</a>
         </li>
       </ul>
-
-      <form *ngIf="isAuthenticated" class="d-flex">
-        <input
-          class="form-control me-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <button class="btn btn-outline-light" type="submit">Search</button>
-      </form>
 
       <div class="nav navbar-nav navbar-right" id="navbarToggler">
         <ul class="navbar-nav ml-auto">
