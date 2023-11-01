@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from './auth/auth.module';
 import { SharedModule } from './shared/shared.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
@@ -18,6 +19,7 @@ import { SharedModule } from './shared/shared.module';
     HttpClientModule,
     SharedModule,
     AuthModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
