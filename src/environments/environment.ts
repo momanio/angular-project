@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  firebaseAPI: 'AIzaSyDD6Y-haWQwD6ISt_8Jwy87DltAa7glftk', // Paste your Api Key from Firebase Authentication
+  firebaseAPI: '', // Paste your Api Key from Firebase Authentication
 };
 
 /*
