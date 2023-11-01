@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs';
 export class AppComponent implements OnInit, OnDestroy {
   private userSub!: Subscription;
   isAuthenticated = false;
+
   constructor(private authService: AuthService) {}
   ngOnInit() {
     this.userSub = this.authService.user.subscribe((user) => {

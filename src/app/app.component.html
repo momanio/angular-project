@@ -1,5 +1,5 @@
-<app-header></app-header>
-<div class="container-fluid">
+<app-header *ngIf="isAuthenticated"></app-header>
+<div class="costum-background container-fluid">
   <div class="row">
     <div class="col-xl-12">
       <router-outlet></router-outlet>

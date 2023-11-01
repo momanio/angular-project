@@ -13,10 +13,16 @@
   padding: 8% 0 0;
   margin: auto;
 }
+.logo {
+  padding-bottom: 15px;
+  opacity: 1;
+}
 .form {
+  background-color: #5c5959;
+  opacity: 0.83;
+  border-radius: 5%;
   position: relative;
   z-index: 1;
-  background: #ffffff;
   max-width: 360px;
   margin: 0 auto 100px;
   padding: 45px;
@@ -26,13 +32,13 @@
 .form input {
   font-family: "Roboto", sans-serif;
   outline: 0;
-  background: #f2f2f2;
+  background: transparent;
   width: 100%;
   border: 0;
   margin: 0 0 15px;
   padding: 15px;
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 16px;
 }
 .form button {
   font-family: "Roboto", sans-serif;
@@ -42,7 +48,7 @@
   border: 0;
   padding: 15px;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 18px;
   -webkit-transition: all 0.2 ease;
   transition: all 0.2 ease;
   cursor: pointer;
@@ -51,12 +57,11 @@
 .form button:active,
 .form .message {
   margin: 15px 0 0;
-  color: #b3b3b3;
-  font-size: 12px;
+  color: #ffffff;
+  font-size: 16px;
 }
 .form .message a {
-  color: black;
-  text-decoration: none;
+  color: #000000;
 }
 .form .register-form {
   display: none;
@@ -64,7 +69,7 @@
 .container {
   position: relative;
   z-index: 1;
-  max-width: 300px;
+  max-width: 100px;
   margin: 0 auto;
 }
 .container:before,

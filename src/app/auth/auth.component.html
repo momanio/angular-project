@@ -13,6 +13,13 @@
         (ngSubmit)="onSubmit(authForm)"
         *ngIf="!isLoading"
       >
+        <div class="logo navbar-brand">
+          <img
+            src="../../assets/images/logo-transparent.png"
+            width="140"
+            height="140"
+          />
+        </div>
         <input
           type="email"
           id="email"
@@ -47,17 +54,28 @@
         </p>
       </form>
       <hr />
-      <div class="social-line text-center">
+      <div class="text-center">
         <span class="message">Or Login with</span>
-        <a href="" class="btn btn-neutral btn-facebook btn-just-icon">
-          <i class="fa fa-facebook-square"></i>
-        </a>
-        <a href="" class="btn btn-neutral btn-google btn-just-icon">
-          <i class="fa fa-google-plus"></i>
-        </a>
-        <a href="" class="btn btn-neutral btn-twitter btn-just-icon">
-          <i class="fa fa-twitter"></i>
-        </a>
+        <div class="row">
+          <div class="col-md-4">
+            <a href="" class=""
+              >Facobook
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="" class="">
+              Google
+              <i class="fa-brands fa-google"></i>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="" class="">
+              Twitter
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
