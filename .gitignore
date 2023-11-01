@@ -11,6 +11,9 @@
 npm-debug.log
 yarn-error.log
 
+# Enviroments Files
+/environments/environment.prod.ts
+/environments/environment.ts
 # IDEs and editors
 .idea/
 .project
